@@ -2,7 +2,7 @@
 
 int Util::arg_print_usage = 0;
 int Util::arg_available_frame = 5;
-Util::replace_policy_t Util::arg_replace_policy = BELADY;
+Util::replace_policy_t Util::arg_replace_policy = FIFO;
 string Util::arg_input_filepath = "N/A";
 
 const int Util::parse(int argc, char * argv[]){
