@@ -59,8 +59,10 @@ const int Util::parse(int argc, char * argv[]){
                         err = 1;
                         break;
                     }
+                    break;
                 default:
                     err = 1;
+                    break;
             }
         }
     }

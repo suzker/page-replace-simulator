@@ -6,6 +6,7 @@
 #define __HEADER_UTILITY__
 #include <iostream>
 #include <string>
+#include "stdlib.h"
 
 using namespace std;
 
