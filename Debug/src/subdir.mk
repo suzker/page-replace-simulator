@@ -6,17 +6,23 @@
 CPP_SRCS += \
 ../src/Policy.cpp \
 ../src/PolicyFIFO.cpp \
-../src/PolicyFIFO_test.cpp 
+../src/PolicyFIFO_test.cpp \
+../src/PolicyOptimal.cpp \
+../src/Util.cpp 
 
 OBJS += \
 ./src/Policy.o \
 ./src/PolicyFIFO.o \
-./src/PolicyFIFO_test.o 
+./src/PolicyFIFO_test.o \
+./src/PolicyOptimal.o \
+./src/Util.o 
 
 CPP_DEPS += \
 ./src/Policy.d \
 ./src/PolicyFIFO.d \
-./src/PolicyFIFO_test.d 
+./src/PolicyFIFO_test.d \
+./src/PolicyOptimal.d \
+./src/Util.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -1,6 +1,6 @@
-src/PolicyFIFO_test.d: ../src/PolicyFIFO_test.cpp ../src/PolicyFIFO.h \
+src/PolicyFIFO_test.d: ../src/PolicyFIFO_test.cpp ../src/PolicyOptimal.h \
  ../src/Policy.h
 
-../src/PolicyFIFO.h:
+../src/PolicyOptimal.h:
 
 ../src/Policy.h:

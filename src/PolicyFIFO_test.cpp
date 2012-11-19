@@ -5,13 +5,15 @@
  *      Author: zsu2
  */
 
-#include "PolicyFIFO.h"
+#include "PolicyOptimal.h"
 
 
 int main(){
-	Policy<int> * pf = new PolicyFIFO<int>(4);
-	cout << "Page faults: " << pf->getNumPageFault() << endl;
-	// insert pages
+	int in[] = {1,2,3,4,5,3,3,3,3,6,6,1};
+	int input_size = sizeof in/sizeof(int);
+	PolicyOptimal<int> * pf = new PolicyOptimal<int>(in, 4, input_size);
+	cout << pf->getOptimalResult() << endl;
+	/*// insert pages
 	pf->addPage(1);
 	pf->addPage(2);
 	pf->addPage(3);
@@ -23,6 +25,6 @@ int main(){
 	pf->addPage(3);
 	pf->addPage(6);
 	pf->addPage(6);
-	pf->addPage(1);
-	cout << "Page faults: " << pf->getNumPageFault() << endl;
+	pf->addPage(1);*/
+	return 0;
 }
