@@ -13,12 +13,10 @@
 template<typename T>
 class PolicyLRUClock: public Policy<T> {
 public:
-	PolicyLRUClock() {
-		// TODO Auto-generated constructor stub
+	PolicyLRUClock(size_t s) : Policy<T>(s) {
 
 	}
 	virtual ~PolicyLRUClock() {
-		// TODO Auto-generated destructor stub
 	}
 };
 

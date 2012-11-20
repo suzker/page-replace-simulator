@@ -18,10 +18,11 @@ private:
 	list<T> * __stack_list;
 
 public:
-	PolicyLRUStack() {
+	PolicyLRUStack(size_t s) : Policy<T>(s) {
 		__stack_list = new list<T>();
 	}
 	virtual ~PolicyLRUStack() {
+		delete __stack_list;
 	}
 
 	virtual bool addPage(T data){
@@ -41,6 +42,9 @@ public:
 
 protected:
 	virtual size_t _getNextFrameIdx(){
+		if (this->__frames->size() < this->__num_frames){
+			return (this->__frames->size());
+		}
 		T _lru_data = *(this->__stack_list.end()-1);
 		size_t _lru_idx=0;
 		typename list<T>::iterator _itr_frm;
