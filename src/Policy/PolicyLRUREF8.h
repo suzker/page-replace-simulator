@@ -42,7 +42,7 @@ public:
 		for (_map_itr = __ref_byte_map->begin(); _map_itr != __ref_byte_map->end(); ++_map_itr){
 			(*__ref_byte_map)[_map_itr->first] = (*__ref_byte_map)[_map_itr->first]>>1;
 			// give the current occurred page a little bit credit
-			if (this->__pages_loaded.find(_map_itr->first) == this->__pages_loaded.end()){
+			if (this->__pages_loaded->find(_map_itr->first) == this->__pages_loaded->end()){
 				(*__ref_byte_map)[_map_itr->first] = (*__ref_byte_map)[_map_itr->first] | 0x80;
 			}
 		}
@@ -59,7 +59,7 @@ protected:
 		int _min_ref = numeric_limits<int>::max();
 		typename map<T, uint8_t>::iterator _map_itr;
 		for (_map_itr = this->__ref_byte_map->begin(); _map_itr != __ref_byte_map->end(); ++_map_itr){
-			if (int(_map_itr->second) < _map_itr){
+			if (int(_map_itr->second) < _min_ref){
 				_lru_idx = _curr_idx;
 			}
 			++_curr_idx;

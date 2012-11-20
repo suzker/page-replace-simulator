@@ -45,7 +45,7 @@ protected:
 		if (this->__frames->size() < this->__num_frames){
 			return (this->__frames->size());
 		}
-		T _lru_data = *(this->__stack_list.end()-1);
+		T _lru_data = this->__stack_list->back();
 		size_t _lru_idx=0;
 		typename list<T>::iterator _itr_frm;
 		for (_itr_frm = this->__frames->begin(); _itr_frm != this->__frames->end(); ++_itr_frm){

@@ -5,6 +5,10 @@ int Util::arg_available_frame = 5;
 Util::replace_policy_t Util::arg_replace_policy = FIFO;
 string Util::arg_input_filepath = "N/A";
 
+void Util::printUsage(){
+	cout << "Usage: \n\t-h:     \tprint usage summary and exit.\n\t-f [op]:\tset the avaliable number of frames to [op], default 5.\n\t-r [op]:\tset the replacement policy to[op], default: FIFO. *note [op] must be ALL CAPITAL!\n\t-i [op]:\tindicate the input file to [op], if not specified, will enter manual input mode." << endl;;
+}
+
 const int Util::parse(int argc, char * argv[]){
     int i, err = 0;
     for (i=1; i<argc; ++i){
@@ -70,6 +74,6 @@ const int Util::parse(int argc, char * argv[]){
         cout << "[ERR] incorrect arguments." << endl;
         return 0;
     }
-    cout << "usage: " << Util::arg_print_usage << ", frames: " << Util::arg_available_frame << ", filepath: " << Util::arg_input_filepath << endl;
+    //cout << "usage: " << Util::arg_print_usage << ", frames: " << Util::arg_available_frame << ", filepath: " << Util::arg_input_filepath << endl;
     return 1;
 }

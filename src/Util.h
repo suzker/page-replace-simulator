@@ -18,7 +18,8 @@ class Util {
         static replace_policy_t arg_replace_policy;
         static string arg_input_filepath;
         const int parse(int, char **);
+        void printUsage();
         Util(){};
-        ~Util();
+        virtual ~Util(){};
 };
 #endif

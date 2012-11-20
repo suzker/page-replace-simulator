@@ -4,16 +4,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/PolicyUnitTest.cpp \
-../src/Util.cpp 
+../src/Util.cpp \
+../src/virtualmem.cpp 
 
 OBJS += \
-./src/PolicyUnitTest.o \
-./src/Util.o 
+./src/Util.o \
+./src/virtualmem.o 
 
 CPP_DEPS += \
-./src/PolicyUnitTest.d \
-./src/Util.d 
+./src/Util.d \
+./src/virtualmem.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
